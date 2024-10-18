@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reminder Extension</title>
+    <style>
+        body {
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #toggleBtn {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #toggleBtn.clicked {
+            /* Define the styles for the clicked state */
+            background-color: #f44336;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Posture Correction Reminder</h2>
+    <button id="toggleBtn">Toggle Reminder</button>
+    <script src="popup.js"></script>
+    <script>
+        // Get the button element
+        var toggleBtn = document.getElementById('toggleBtn');
+
+        // Add a click event listener to the button
+        toggleBtn.addEventListener('click', function () {
+            // Toggle the 'clicked' class to change the style
+            toggleBtn.classList.toggle('clicked');
+        });
+    </script>
+</body>
+
+</html>
